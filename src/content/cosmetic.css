@@ -1,0 +1,63 @@
+/* Adsenguisher — Cosmetic Ad Hiding (gated by feature attributes) */
+
+/* Video overlays & ad module UI */
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-video="0"]) .ytp-ad-overlay-container,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-video="0"]) .ytp-ad-message-container,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-video="0"]) .ytp-ad-text-overlay,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-video="0"]) .ytp-ad-image-overlay,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-video="0"]) .ytp-ad-persistent-progress-bar-container,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-video="0"]) .ytp-ad-action-interstitial,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-video="0"]) #movie_player.ad-showing .ytp-ad-player-overlay-layout {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Feed, search, sidebar, masthead & promo banners */
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-ad-slot-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-in-feed-ad-layout-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-search-pyv-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-promoted-sparkles-web-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-promoted-sparkles-text-search-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-promoted-video-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-display-ad-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-compact-promoted-video-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-compact-promoted-item-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-banner-promo-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-statement-banner-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-video-masthead-ad-v3-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-primetime-promo-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-brand-video-shelf-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-brand-video-singleton-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-mealbar-promo-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) #masthead-ad,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) #player-ads,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-player-legacy-desktop-watch-ads-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-companion-slot-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-action-companion-ad-renderer,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-ads"],
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-rich-item-renderer:has(ytd-ad-slot-renderer, ytd-in-feed-ad-layout-renderer, ad-badge-view-model, feed-ad-metadata-view-model, ytd-promoted-sparkles-web-renderer),
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-rich-section-renderer:has(ytd-statement-banner-renderer, ytd-ad-slot-renderer, ytd-brand-video-shelf-renderer, ytd-banner-promo-renderer),
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-item-section-renderer:has(> #contents > ytd-ad-slot-renderer:only-child),
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-item-section-renderer:has(> #contents > ytd-search-pyv-renderer:only-child),
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-feed="0"]) ytd-item-section-renderer:has(> #contents > ytd-in-feed-ad-layout-renderer:only-child) {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Shorts ads */
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-shorts="0"]) ytd-reel-video-renderer[is-ads-overlay],
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-shorts="0"]) ytd-reel-video-renderer:has(ytd-ad-slot-renderer),
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-shorts="0"]) ytd-reel-video-renderer:has(ad-badge-view-model),
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-shorts="0"]) ytd-reel-video-renderer:has(ad-button-view-model) {
+  display: none !important;
+}
+
+/* Anti-adblock enforcement modals */
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-anti="0"]) ytd-enforcement-message-view-model,
+:root:not([data-adsenguisher-disabled="1"]):not([data-adsenguisher-anti="0"]) tp-yt-paper-dialog:has(ytd-enforcement-message-view-model) {
+  display: none !important;
+}
